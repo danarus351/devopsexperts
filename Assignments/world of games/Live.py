@@ -12,11 +12,11 @@ def load_game():
         '   3. Currency Roulette - try and guess the value of a random amount of USD in ILS\n'
         'please enter the game number(1-3):'))
 
-    if game < 1 or game >3 :
+    if game < 1 or game > 3:
         return print('no game was  choosen')
 
     diff = int(input('Please choose game difficulty from 1 to 5:'))
-    if diff < 1 or diff >5 :
+    if diff < 1 or diff > 5:
         return print('no difficulty was  choosen')
-
-
+    print(f"You have chosen to play with {game} with difficulty level {diff}")
+    return game, diff
