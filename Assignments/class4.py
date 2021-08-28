@@ -1,18 +1,18 @@
 # # assignment 1 +   2
 from time import sleep
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-
-firefox = webdriver.Firefox(executable_path='/home/ubuntu/Desktop/devops/Assignments/selenium_driver/geckodriver')
-chrome = webdriver.Chrome(executable_path='/home/ubuntu/Desktop/devops/Assignments/selenium_driver/chromedriver')
+chrome_driver = '/home/ubuntu/Desktop/devops/Assignments/selenium_driver/chromedriver'
+firefox_driver = '/home/ubuntu/Desktop/devops/Assignments/selenium_driver/geckodriver'
 try:
-    chrome.get('https://www.walla.co.il/')
+    chrome = webdriver.Chrome(executable_path=chrome_driver)
+    chrome.get('https://github.com/')
     sleep(1)
 finally:
     chrome.close()
 
 try:
-    firefox.get('https://www.ynet.co.il')
+    firefox = webdriver.Firefox(executable_path=firefox_driver)
+    firefox.get('https://github.com/')
     title = firefox.title
     firefox.refresh()
     print(title == firefox.name)
@@ -20,7 +20,6 @@ try:
 
 finally:
     firefox.close()
-    chrome.close()
 
 # assignment 3
 #
@@ -28,6 +27,7 @@ finally:
 
 # assignment 4
 try:
+    firefox = webdriver.Firefox(executable_path=firefox_driver)
     firefox.get('https://translate.google.com/')
     firefox.find_element_by_xpath('//*[@class="er8xn"]').send_keys('בננה')
     sleep(5)
@@ -36,6 +36,7 @@ finally:
 
 # assignment 5
 try:
+    firefox = webdriver.Firefox(executable_path=firefox_driver)
     firefox.get('https://youtube.com/')
     firefox.find_element_by_xpath('//*[@name="search_query"]').send_keys('doja cat - women')
     firefox.find_element_by_xpath('//*[@id="search-icon-legacy"]').click()
@@ -47,6 +48,7 @@ finally:
 # assignment 6
 
 try:
+    chrome = webdriver.Chrome(executable_path=chrome_driver)
     chrome.get('https://translate.google.com/')
     first_by_class = chrome.find_element_by_xpath('//*[@class="er8xn"]')
     second_by_arialabel = chrome.find_element_by_xpath('//*[@aria-label="Source text"]')
@@ -61,6 +63,7 @@ finally:
 # assignment 7
 
 try:
+    chrome = webdriver.Chrome(executable_path=chrome_driver)
     chrome.get('https://www.facebook.com/')
     chrome.find_element_by_name("email").send_keys('email')
     chrome.find_element_by_name('pass').send_keys('not remember')
@@ -74,6 +77,7 @@ finally:
 # assignment 8
 
 try:
+    chrome = webdriver.Chrome(executable_path=chrome_driver)
     chrome.get('https://www.facebook.com/')
     print(chrome.get_cookies())
     chrome.delete_all_cookies()
@@ -84,6 +88,7 @@ finally:
 
 # assignment 9
 try:
+    chrome = webdriver.Chrome(executable_path=chrome_driver)
     chrome.get('https://github.com/')
     chrome.find_element_by_name('q').send_keys('Selenium')
     chrome.find_element_by_name('q').submit()
