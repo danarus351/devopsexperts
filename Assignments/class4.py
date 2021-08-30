@@ -2,7 +2,8 @@
 from time import sleep
 from selenium import webdriver
 chrome_driver = '/home/ubuntu/Desktop/devops/Assignments/selenium_driver/chromedriver'
-firefox_driver = '/home/ubuntu/Desktop/devops/Assignments/selenium_driver/geckodriver'
+firefox_driver = '//home/ubuntu/Desktop/devops/Assignments/selenium_driver/geckodriver'
+
 try:
     chrome = webdriver.Chrome(executable_path=chrome_driver)
     chrome.get('https://github.com/')
@@ -29,7 +30,7 @@ finally:
 try:
     firefox = webdriver.Firefox(executable_path=firefox_driver)
     firefox.get('https://translate.google.com/')
-    firefox.find_element_by_xpath('//*[@class="er8xn"]').send_keys('בננה')
+    firefox.find_element_by_xpath('//*[@class="er8xn"]').send_keys('banana')
     sleep(5)
 finally:
     firefox.close()

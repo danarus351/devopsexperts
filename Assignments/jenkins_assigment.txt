@@ -1,0 +1,121 @@
+assignment 1:
+
+Started by user admin
+Running as SYSTEM
+Building remotely on agent-1 in workspace /tmp/workspace/class5/assignment 1
+[assignment 1] $ /bin/sh -xe /tmp/jenkins4676116421920947542.sh
++ echo dan arus
+Finished: SUCCESS
+
+assignment 2:
+
+Started by user admin
+Running as SYSTEM
+Building on master in workspace /var/lib/jenkins/workspace/class5/assignment 2
+[assignment 2] $ /bin/sh -xe /tmp/jenkins4613412753091511061.sh
++ cat /home/ubuntu/Desktop/myname.txt
+dan arus
+Finished: SUCCESS
+
+assignment 3:
+
+Started by user admin
+Running as SYSTEM
+Building remotely on agent-1 in workspace /tmp/workspace/class5/assignment 3
+[assignment 3] $ /bin/sh -xe /tmp/jenkins2757924722905163243.sh
++ df -h /dev/sda1 --output=source,fstype,size,used,avail,pcent
+Filesystem     Type  Size  Used Avail Use%
+/dev/sda1      ext4   50G   11G   37G  24%
+Finished: SUCCES
+
+assignment 4:
+
+Started by user admin
+Running as SYSTEM
+Building remotely on agent-1 in workspace /tmp/workspace/class5/assignment 4
+[assignment 4] $ /bin/sh -xe /tmp/jenkins1412055912178128550.sh
++ mv /home/ubuntu/Desktop/myname.txt /home/ubuntu/Desktop/devops/Assignments
+Finished: SUCCESS
+
+assignment 5:
+
+Started by timer
+Running as SYSTEM
+Building remotely on agent-1 in workspace /tmp/workspace/class5/assignment 5
+Finished: SUCCESS
+
+assignment 6:
+
+Started by user admin
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on agent-1 in /tmp/workspace/class5/assignment 1-4
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Assignment 1)
+[Pipeline] sh
++ echo dan arus
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Assignment 2)
+[Pipeline] sh
++ cat /home/ubuntu/Desktop/myname.txt
+dan arus
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Assignment 3)
+[Pipeline] sh
++ df -h /dev/sda1 --output=source,fstype,size,used,avail,pcent
+Filesystem     Type  Size  Used Avail Use%
+/dev/sda1      ext4   50G   12G   36G  24%
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Assignment 4)
+[Pipeline] sh
++ mv /home/ubuntu/Desktop/myname.txt /home/ubuntu/Desktop/devops/Assignments
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+
+
+assignment 7:
+
+Started by user admin
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on agent-1 in /tmp/workspace/class5/assignment 7
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (test)
+[Pipeline] dir
+Running in /home/ubuntu/Desktop/devops/Assignments
+[Pipeline] {
+[Pipeline] sh
++ python3 class4.py
+False
+First WebElement: <selenium.webdriver.remote.webelement.WebElement (session="39ba40978b81e428742264314bb572f2", element="9e109651-ab9b-477e-bb4f-9c6e3af1976b")>
+second WebElement: <selenium.webdriver.remote.webelement.WebElement (session="39ba40978b81e428742264314bb572f2", element="9e109651-ab9b-477e-bb4f-9c6e3af1976b")>
+third WebElement: <selenium.webdriver.remote.webelement.WebElement (session="39ba40978b81e428742264314bb572f2", element="9e109651-ab9b-477e-bb4f-9c6e3af1976b")>
+[{'domain': '.facebook.com', 'expiry': 1630917179, 'httpOnly': False, 'name': 'wd', 'path': '/', 'sameSite': 'Lax', 'secure': True, 'value': '1042x1022'}, {'domain': '.facebook.com', 'expiry': 1693384379, 'httpOnly': True, 'name': 'datr', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': 'upcsYbSh8jiW87Way9s8lDU-'}, {'domain': '.facebook.com', 'expiry': 1693384378, 'httpOnly': True, 'name': 'sb', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': 'upcsYS2vg-pGXt46QDN-83a8'}, {'domain': '.facebook.com', 'expiry': 1638088377, 'httpOnly': True, 'name': 'fr', 'path': '/', 'sameSite': 'None', 'secure': True, 'value': '1wrxrejRyMjegHMCZ..BhLJe6.ka.AAA.0.0.BhLJe6.AWVOK5GgEGU'}]
+[]
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+
+challenge:
+
+I did succesed to run second job after the first one automaticly.
+I see it in the upstream and down stream
