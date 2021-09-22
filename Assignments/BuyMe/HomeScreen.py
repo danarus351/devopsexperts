@@ -31,9 +31,11 @@ try:
             item.click()
             break
 
-    gift = browser.find_elements_by_partial_link_text('תמצאו לי מתנה')
-    for item in gift:
-        item.click()
+    browser.find_element_by_xpath('/html/body/div[3]/div/header/div[3]/div/form/a').click()
+
+    # gift = browser.find_elements_by_partial_link_text('תמצאו לי מתנה')
+    # for item in gift:
+    #     item.click()
 
     browser.find_element_by_xpath('/html/body/div[3]/div/div[2]/div[1]/div/ul/li[14]/a/div/div[2]/span').click()
 
